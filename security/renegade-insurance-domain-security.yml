@@ -1,0 +1,23 @@
+generated: '2026-08-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: renegadeinsurance.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 26 19:39:05 2026 GMT
+  hsts: false
+- host: api.renegadeinsurance.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 18 23:59:59 2026 GMT
+  hsts: false
+  note: live AWS ALB; answers 404 "Invalid Endpoint" on every probed path (no public
+    contract, docs, or discovery document)
+domains:
+- domain: renegadeinsurance.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
